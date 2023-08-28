@@ -1,4 +1,4 @@
-function Banner({ tag, title, img, img2, bgColor, destination }) {
+function Banner({ tag, title, img, img2, bgColor, destination, more }) {
   return (
     <div
       style={{
@@ -99,6 +99,24 @@ function Banner({ tag, title, img, img2, bgColor, destination }) {
           }}
         >
           {destination}
+        </div>
+        <div
+          style={{
+            width: 90,
+            height: 25,
+            backgroundColor: 'rgb(0, 0, 0, 0.5',
+            color: 'white',
+            zIndex: 3,
+            position: 'relative',
+            left: 300,
+            bottom: 15,
+            borderRadius: 20,
+            textAlign: 'center',
+            lineHeight: 1.8,
+            padding: 2,
+          }}
+        >
+          {more}
         </div>
       </div>
     </div>

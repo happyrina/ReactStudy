@@ -11,6 +11,7 @@ const data = [
     title: '지금 바로 떠나는 \n 해외 바캉스 특가',
     img: 'https://mobile.busan.com/nas/wcms/wcms_data/photos/2019/07/24/2019072418301331319_l.jpg',
     destination: '해외',
+    more: '모아보기 +',
   },
 ]
 
@@ -24,6 +25,7 @@ ReactDOM.createRoot(root).render(
           img={지금값.img}
           img2={지금값.img2}
           destination={지금값.destination}
+          more={지금값.more}
         />
       )
     })}
