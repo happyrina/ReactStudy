@@ -1,46 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-import Box from './components/Box'
-import RankListItem from './components/RankListItem'
+import Banner from './components/Banner'
 
 const root = document.getElementById('app')
 
 const data = [
   {
-    rank: 1,
-    title: 'Super Shy',
-    singer: '뉴진스',
-    imageUrl:
-      'https://i.namu.wiki/i/wrWOftbH09kzkxQAu6oLODje3kbkPD7U2VZntoGvAM-vn-RooTNigvVUyY3JYSlij1Idmq2tBdJXx0JL9qOoPQ.gif',
-  },
-  {
-    rank: 2,
-    title: 'Seven',
-    singer: '정국',
-    imageUrl:
-      'https://i.namu.wiki/i/wrWOftbH09kzkxQAu6oLODje3kbkPD7U2VZntoGvAM-vn-RooTNigvVUyY3JYSlij1Idmq2tBdJXx0JL9qOoPQ.gif',
-  },
-  {
-    rank: 3,
-    title: 'ETA',
-    singer: '뉴진스',
-    imageUrl:
-      'https://i.namu.wiki/i/wrWOftbH09kzkxQAu6oLODje3kbkPD7U2VZntoGvAM-vn-RooTNigvVUyY3JYSlij1Idmq2tBdJXx0JL9qOoPQ.gif',
-  },
-  {
-    rank: 4,
-    title: '헤어지자말해요',
-    singer: '박재정',
-    imageUrl:
-      'https://i.namu.wiki/i/wrWOftbH09kzkxQAu6oLODje3kbkPD7U2VZntoGvAM-vn-RooTNigvVUyY3JYSlij1Idmq2tBdJXx0JL9qOoPQ.gif',
-  },
-  {
-    rank: 5,
-    title: '퀸카',
-    singer: '아이들',
-    imageUrl:
-      'https://i.namu.wiki/i/wrWOftbH09kzkxQAu6oLODje3kbkPD7U2VZntoGvAM-vn-RooTNigvVUyY3JYSlij1Idmq2tBdJXx0JL9qOoPQ.gif',
+    tag: '#동남아 #남태평양 #유럽여행',
+    title: '지금 바로 떠나는 \n 해외 바캉스 특가',
+    img: 'https://mobile.busan.com/nas/wcms/wcms_data/photos/2019/07/24/2019072418301331319_l.jpg',
+    destination: '해외',
   },
 ]
 
@@ -48,11 +18,12 @@ ReactDOM.createRoot(root).render(
   <div>
     {data.map((지금값) => {
       return (
-        <RankListItem
-          key={지금값.rank}
-          rank={지금값.rank}
+        <Banner
+          tag={지금값.tag}
           title={지금값.title}
-          singer={지금값.singer}
+          img={지금값.img}
+          img2={지금값.img2}
+          destination={지금값.destination}
         />
       )
     })}
