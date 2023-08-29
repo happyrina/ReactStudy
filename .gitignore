@@ -1,7 +1,2 @@
-/node_modules
 node_modules
-/dist
-webpack.config.js
-.babelrc
-.eslintrc
-.prettierrc
+dist

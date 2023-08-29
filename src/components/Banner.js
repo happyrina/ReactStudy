@@ -1,4 +1,12 @@
-function Banner({ tag, title, img, img2, bgColor, destination, more }) {
+function Banner({
+  tag,
+  title,
+  img,
+  bgColor,
+  destination,
+  moreLink,
+  backgroundColor,
+}) {
   return (
     <div
       style={{
@@ -11,7 +19,7 @@ function Banner({ tag, title, img, img2, bgColor, destination, more }) {
     >
       <div
         style={{
-          backgroundColor: '#00AAFF',
+          backgroundColor: backgroundColor || '#00AAFF',
           width: 400,
           height: 180,
           borderRadius: 17,
@@ -74,19 +82,6 @@ function Banner({ tag, title, img, img2, bgColor, destination, more }) {
         </div>
         <div
           style={{
-            width: 150,
-            height: 150,
-            borderRadius: 150,
-            backgroundColor: '#008DC0',
-            position: 'absolute',
-            right: -90,
-            top: 30,
-          }}
-        >
-          {img2}
-        </div>
-        <div
-          style={{
             width: 30,
             height: 15,
             border: '1px solid white',
@@ -100,24 +95,28 @@ function Banner({ tag, title, img, img2, bgColor, destination, more }) {
         >
           {destination}
         </div>
-        <div
-          style={{
-            width: 90,
-            height: 25,
-            backgroundColor: 'rgb(0, 0, 0, 0.5',
-            color: 'white',
-            zIndex: 3,
-            position: 'relative',
-            left: 300,
-            bottom: 15,
-            borderRadius: 20,
-            textAlign: 'center',
-            lineHeight: 1.8,
-            padding: 2,
-          }}
-        >
-          {more}
-        </div>
+        {moreLink != null ? (
+          <div
+            style={{
+              width: 90,
+              height: 25,
+              backgroundColor: 'rgb(0, 0, 0, 0.5',
+              color: 'white',
+              zIndex: 3,
+              position: 'relative',
+              left: 300,
+              bottom: 15,
+              borderRadius: 20,
+              textAlign: 'center',
+              lineHeight: 1.8,
+              padding: 2,
+            }}
+          >
+            <a href={moreLink} target="_blank" rel="noreferrer">
+              모아보기 +
+            </a>
+          </div>
+        ) : null}
       </div>
     </div>
   )
