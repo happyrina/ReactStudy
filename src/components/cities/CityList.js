@@ -5,7 +5,6 @@ function CityList({ countryName, data }) {
     <div>
       <h2>{countryName}</h2>
       {data.map((city, index) => {
-        console.log(city.cityName)
         return (
           <City
             key={index}
