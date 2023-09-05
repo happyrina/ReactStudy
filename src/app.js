@@ -6,6 +6,7 @@
 // import HotelList from './components/hotels/HotelList'
 import Header from './components/common/Header'
 import Footer from './components/common/Footer'
+import './app.css'
 
 // const data = [
 //   {
@@ -80,6 +81,11 @@ function App() {
 
     <div>
       <Header />
+      <div className="mainTitle">
+        호텔부터 펜션까지
+        <br />
+        최저가 숙소 예약
+      </div>
       <Footer />
     </div>
   )

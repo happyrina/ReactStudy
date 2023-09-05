@@ -1,0 +1,11 @@
+.mainTitle {
+    color: rgb(58, 58, 58);
+    font-weight: bold;
+    white-space: pre-line;
+    font-size: 26px;
+    letter-spacing: -0.3px;
+    line-height: 1.32;
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    margin: 32px 0px 0px 32px;
+}
