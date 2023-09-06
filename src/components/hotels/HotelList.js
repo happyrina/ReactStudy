@@ -1,23 +1,27 @@
 import Hotel from './Hotel'
+import styles from '../styles/Hotel.module.css'
 
-function HotelList({ title }) {
+function HotelList({ title, data }) {
   return (
     <div>
-      <div>{title}</div>
-      <Hotel
-        hotelImg="https://media.triple.guide/triple-cms/c_limit,f_auto,h_104,w_1024/38554503-be9c-4c58-a295-11b3e02ff4b1"
-        hotelName="코토 노 카신"
-        hotelPrice="295,741원"
-        isSale={true}
-      ></Hotel>
-      <Hotel
-        hotelImg="https://media.triple.guide/triple-cms/c_limit,f_auto,h_104,w_1024/38554503-be9c-4c58-a295-11b3e02ff4b1"
-        hotelName="코토 노 카신"
-        hotelPrice="295,741원"
-        isSale={false}
-      ></Hotel>
+      <div className={styles.hotelListTitle}>{title}</div>
+      <div className={styles.HotelListContainer}>
+        {data.map((hotel, index) => {
+          return (
+            <Hotel
+              key={index}
+              hotelImg={hotel.hotelImg}
+              hotelName={hotel.hotelName}
+              hotelPrice={hotel.hotelPrice}
+              isSale={false}
+            ></Hotel>
+          )
+        })}
+      </div>
     </div>
   )
 }
 
 export default HotelList
+
+//만든 붕어빵 틀에 재료 넣기
