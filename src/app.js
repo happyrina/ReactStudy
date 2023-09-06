@@ -115,6 +115,11 @@ function App() {
         title={해외특가호텔데이터.title}
         data={해외특가호텔데이터.data}
       ></HotelList>
+      <SectionBar />
+      <HotelList
+        title={해외특가호텔데이터.title}
+        data={해외특가호텔데이터.data}
+      ></HotelList>
       <Footer />
     </div>
   )
