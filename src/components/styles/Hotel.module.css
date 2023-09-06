@@ -1,0 +1,47 @@
+.hotelListTitle{
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 700;
+    margin-left: 60px;
+    margin-bottom: 0px 0px 11px 30px;
+}
+
+.HotelListContainer{
+    margin-left: 60px;
+    display: flex;
+
+}
+
+.hotelImg {
+    width: 300px;
+    height: 200px;
+    border-radius: 6px;
+    object-fit: cover;
+    opacity: 1;
+    margin: 15px 15px 10px 0px;
+}
+
+
+.hotelName {
+    width: 300px;
+    box-sizing: border-box;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    overflow-wrap: break-word;
+    float: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.hotelPrice {
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    float: none;
+    font-weight: 700;
+    white-space: pre-line;
+    font-size: 18px;
+    line-height: 1.2;
+}
