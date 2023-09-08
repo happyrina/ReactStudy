@@ -13,7 +13,7 @@ function HotelList({ title, data }) {
               hotelImg={hotel.hotelImg}
               hotelName={hotel.hotelName}
               hotelPrice={hotel.hotelPrice}
-              isSale={false}
+              isSale={hotel.isSale}
             ></Hotel>
           )
         })}

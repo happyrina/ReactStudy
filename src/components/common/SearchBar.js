@@ -4,7 +4,7 @@ function SearchBar() {
       <input
         style={{
           padding: '7px 20px 7px 10px',
-          width: '60%',
+          width: '70%',
           height: '30px',
           borderWidth: '2px',
           borderStyle: 'solid',
