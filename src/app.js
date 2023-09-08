@@ -10,6 +10,7 @@ import SearchBar from './components/common/SearchBar'
 import './app.css'
 import HotelList from './components/hotels/HotelList'
 import SectionBar from './components/common/SectionBar'
+import ViewAllBtn from './components/common/ViewAllBtn'
 
 // const data = [
 //   {
@@ -78,14 +79,14 @@ function App() {
           'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/4dbb6ec8-bd14-4afe-80e7-f381f1ebb6a0',
         hotelName: '이스틴 그랜드 호텔 사톤 방콕 - SHA Extra Plus',
         hotelPrice: '129,877원',
-        isSale: 'true',
+        isSale: true,
       },
       {
         hotelImg:
           'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/38554503-be9c-4c58-a295-11b3e02ff4b1',
         hotelName: '코토 노 카신',
         hotelPrice: '295,741원',
-        isSale: 'true',
+        isSale: false,
       },
     ],
   }
@@ -104,22 +105,31 @@ function App() {
 
     <div>
       <Header />
-      <div className="mainTitle">
-        호텔부터 펜션까지
-        <br />
-        최저가 숙소 예약
+      <div
+        className="containerWrap"
+        style={{
+          maxWidth: '768px',
+          margin: 'auto',
+        }}
+      >
+        <div className="mainTitle">
+          호텔부터 펜션까지
+          <br />
+          최저가 숙소 예약
+        </div>
+        <SearchBar />
+        <SectionBar />
+        <HotelList
+          title={해외특가호텔데이터.title}
+          data={해외특가호텔데이터.data}
+        ></HotelList>
+        <ViewAllBtn />
+        <SectionBar />
+        <HotelList
+          title={해외특가호텔데이터.title}
+          data={해외특가호텔데이터.data}
+        ></HotelList>
       </div>
-      <SearchBar />
-      <SectionBar />
-      <HotelList
-        title={해외특가호텔데이터.title}
-        data={해외특가호텔데이터.data}
-      ></HotelList>
-      <SectionBar />
-      <HotelList
-        title={해외특가호텔데이터.title}
-        data={해외특가호텔데이터.data}
-      ></HotelList>
       <Footer />
     </div>
   )
