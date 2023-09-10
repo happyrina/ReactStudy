@@ -9,3 +9,16 @@
     box-sizing: border-box;
     margin: 100px 0px 0px 60px;
 }
+
+.bannerContianer {
+    width: 708px;
+    display: flex;
+    overflow: hidden;
+    margin-top: 10px;
+
+}
+
+.hotelList {
+    margin-top: 10px;
+}
+

@@ -11,6 +11,8 @@ import './app.css'
 import HotelList from './components/hotels/HotelList'
 import SectionBar from './components/common/SectionBar'
 import ViewAllBtn from './components/common/ViewAllBtn'
+import BannerList from './components/banner/BannerList'
+import IconContainer from './components/common/IconContainer'
 
 // const data = [
 //   {
@@ -90,6 +92,38 @@ function App() {
       },
     ],
   }
+  const 일본호텔데이터 = {
+    title: '해외 단독 특가 호텔 모음',
+    data: [
+      {
+        hotelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/3bff200f-6475-43ab-8f06-6868411195f6',
+        hotelName: '소테츠 그랜드 프레사 오사카 - 난바',
+        hotelPrice: '82,218원',
+        isSale: false,
+      },
+      {
+        hotelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/1277d180-a367-4a2b-af47-b411a64cf824',
+        hotelName: '도미 인 프리미엄 남바 내추럴 핫 스프링',
+        hotelPrice: '145,000',
+        isSale: true,
+      },
+    ],
+  }
+
+  const 배너데이터 = {
+    bannerdata: [
+      {
+        tag: '얼리버드 혜택 3만원 추가 할인',
+        title: '대만여행 인기 숙소 \n 실시간 특가 모음',
+        img: 'https://mblogthumb-phinf.pstatic.net/20161021_45/suni2park_1476994150025NCJxK_JPEG/%B4%EB%B8%B81.01.jpg?type=w800',
+        destination: '해외',
+        moreLink: '#',
+        backgroundColor: '#FF6565',
+      },
+    ],
+  }
 
   return (
     // <div>
@@ -118,7 +152,10 @@ function App() {
           최저가 숙소 예약
         </div>
         <SearchBar />
-        <SectionBar />
+        <div className="bannerContianer">
+          <BannerList bannerdata={배너데이터.bannerdata} />
+        </div>
+        <IconContainer />
         <HotelList
           title={해외특가호텔데이터.title}
           data={해외특가호텔데이터.data}
@@ -126,9 +163,11 @@ function App() {
         <ViewAllBtn />
         <SectionBar />
         <HotelList
-          title={해외특가호텔데이터.title}
-          data={해외특가호텔데이터.data}
+          title={일본호텔데이터.title}
+          data={일본호텔데이터.data}
         ></HotelList>
+        <ViewAllBtn />
+        <SectionBar />
       </div>
       <Footer />
     </div>
