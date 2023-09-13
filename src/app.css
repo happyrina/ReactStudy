@@ -13,10 +13,16 @@
 .bannerContianer {
     width: 708px;
     display: flex;
-    overflow: hidden;
     margin-top: 10px;
-
+    margin-right: 5px;
+    overflow-x: hidden;
 }
+
+.bannerContianer {
+    width: 708px;
+    display: flex;
+}
+
 
 
 

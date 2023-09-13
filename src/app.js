@@ -13,6 +13,7 @@ import SectionBar from './components/common/SectionBar'
 import ViewAllBtn from './components/common/ViewAllBtn'
 import BannerList from './components/banner/BannerList'
 import IconContainer from './components/common/IconContainer'
+import TravelList from './components/travel/TravelList'
 
 // const data = [
 //   {
@@ -124,7 +125,46 @@ function App() {
       },
     ],
   }
-
+  const 여행추천데이터 = {
+    title: '추천 여행지',
+    data: [
+      {
+        travelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/bf76a583-ea00-4fb0-a066-74bb850d19c1',
+        travelName: '제주',
+      },
+      {
+        travelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/9cd2e606-5f35-4b10-b16d-3da669ffedaa',
+        travelName: '부산',
+      },
+      {
+        travelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/fb14faf3-7563-4a22-851a-debc9eadba58',
+        travelName: '여수',
+      },
+      {
+        travelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/97172bd4-9010-4b26-8522-1ca8845507f8',
+        travelName: '강릉･속초',
+      },
+      {
+        travelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/db0169bf-47f3-493a-ac10-6940ea8974b9',
+        travelName: '가평･양평',
+      },
+      {
+        travelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/5a92b10c-495c-47e5-bdd8-82ad71e79467',
+        travelName: '경주',
+      },
+      {
+        travelImg:
+          'https://media.triple.guide/triple-cms/c_limit,f_auto,h_1024,w_1024/2d57cf32-094a-46c9-8cfe-932f47321209',
+        travelName: '전주',
+      },
+    ],
+  }
   return (
     // <div>
     //   <CityList
@@ -153,9 +193,14 @@ function App() {
         </div>
         <SearchBar />
         <div className="bannerContianer">
-          <BannerList bannerdata={배너데이터.bannerdata} />
+          <BannerList
+            className="bannerContainerWrap"
+            bannerdata={배너데이터.bannerdata}
+          />
         </div>
         <IconContainer />
+        <TravelList title={여행추천데이터.title} data={여행추천데이터.data} />
+        <SectionBar />
         <HotelList
           title={해외특가호텔데이터.title}
           data={해외특가호텔데이터.data}
