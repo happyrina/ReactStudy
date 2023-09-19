@@ -1,4 +1,4 @@
-import styles from '../styles/Travel.module.css'
+import styles from '../../styles/Travel.module.css'
 
 function Travel({ travelImg, travelName }) {
   return (

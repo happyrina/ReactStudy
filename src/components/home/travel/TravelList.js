@@ -1,5 +1,5 @@
 import Travel from './travel'
-import styles from '../styles/Travel.module.css'
+import styles from '../../styles/Travel.module.css'
 
 function TravelList({ title, data }) {
   return (

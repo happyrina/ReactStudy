@@ -1,6 +1,5 @@
 import Hotel from './Hotel'
-import styles from '../styles/Hotel.module.css'
-
+import styles from '../../styles/Hotel.module.css'
 function HotelList({ title, data }) {
   return (
     <div>
